@@ -78,6 +78,11 @@ input:focus {
   background-color: white;
 }
 
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Or any other color you want */
+}
+
 .cards-container {
   /* background-color: red; */
   display: flex;
@@ -120,4 +125,76 @@ input:focus {
 
 .title h3 {
   margin-bottom: 10px;
+}
+
+/* styles for country.html */
+
+.outer-div {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-img img {
+  width: 800px;
+  height: 600px;
+}
+
+.back-div {
+  cursor: pointer;
+}
+
+.back-txt {
+  margin-right: 10px;
+}
+
+.country-details-container {
+  padding: 20px 200px;
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.centre-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  display: inline;
+}
+
+.heading-div {
+  width: 100%;
+}
+
+.heading-div {
+  padding-bottom: 40px;
+}
+
+.country-details {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.country-details p {
+  padding-bottom: 20px;
+}
+
+.neighbour-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.neighbour-details p {
+  border: 2px solid gray;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }

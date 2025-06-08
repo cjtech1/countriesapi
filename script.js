@@ -1,4 +1,5 @@
 const cardContainer = document.querySelector(".cards-container");
+const cards = document.querySelector(".cards");
 
 //using js to add card element based on data
 function createCardElements(data) {
@@ -7,6 +8,7 @@ function createCardElements(data) {
     card.className = "cards";
 
     card.innerHTML = `
+    <a href="./country.html?name=${data[i]["name"].common}">
         <div class="card-img">
           <img src="${data[i]["flags"].png}" alt="" />
         </div>
@@ -20,6 +22,7 @@ function createCardElements(data) {
             <p>Capital: ${data[0]["capital"][0]} </p>
           </div>
         </div>
+        </a>
       `;
     cardContainer.appendChild(card);
   }
