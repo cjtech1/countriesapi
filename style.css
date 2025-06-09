@@ -78,6 +78,28 @@ input:focus {
   background-color: white;
 }
 
+.dropdown {
+  /* background-color: yellow; */
+  width: 200px;
+  overflow: hidden;
+}
+
+select {
+  width: 200px;
+  height: 52px;
+  padding: 10px; /* Add padding to the select element */
+  line-height: 1.5; /* Increase line height for more space */
+  font-size: 16px;
+  box-shadow: none;
+  border-radius: 10px;
+  background-color: white;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 a {
   text-decoration: none; /* Removes the underline */
   color: inherit; /* Or any other color you want */
@@ -139,6 +161,17 @@ a {
 .flag-img img {
   width: 800px;
   height: 600px;
+
+  /* Enhanced shadow for 3D pop-up effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  /* Add subtle transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flag-img img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .back-div {
@@ -150,7 +183,7 @@ a {
 }
 
 .country-details-container {
-  padding: 20px 200px;
+  padding: 20px 100px;
   display: flex;
   gap: 80px;
   flex-wrap: wrap;
@@ -192,9 +225,14 @@ a {
   gap: 20px;
 }
 
-.neighbour-details p {
+#border-countries-container p {
   border: 2px solid gray;
   padding: 2px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#border-countries-container {
+  display: flex;
+  gap: 20px;
 }
