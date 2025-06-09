@@ -34,7 +34,7 @@ function createCardElements(data) {
 //function to fetch countries and related data
 async function fetchCountries() {
   const url = `https://restcountries.com/v3.1/all?fields=flags,name,population,region,capital`;
-  // const result = await fetch(url);
+  const result = await fetch(url);
   const data = await result.json().then((res) => {
     return res;
   });
@@ -47,7 +47,7 @@ filterValue.addEventListener("click", async () => {
   if (filterValue.value) {
     const region = filterValue.value.toLowerCase();
     const url = `https://restcountries.com/v3.1/region/${region}`;
-    // const result = await fetch(url);
+    const result = await fetch(url);
     const data = await result.json().then((res) => {
       return res;
     });
@@ -61,7 +61,7 @@ filterValue.addEventListener("click", async () => {
 async function searchCountry(country) {
   if (country) {
     const url = `https://restcountries.com/v3.1/name/${country}`;
-    // const result = await fetch(url);
+    const result = await fetch(url);
     const data = await result.json().then((res) => {
       return res;
     });
