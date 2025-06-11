@@ -2,6 +2,9 @@ const detailsContainer = document.querySelector(".country-details-container");
 const params = new URLSearchParams(location.search);
 const country = params.get("name");
 const backButton = document.querySelector(".back-div");
+const navBar = document.querySelector(".top-bar");
+const darkModeBtn = document.querySelector(".right-container");
+const body = document.querySelector("#body");
 
 backButton.addEventListener("click", () => {
   history.back();
@@ -101,3 +104,10 @@ async function fetchCountryDetails() {
 }
 
 fetchCountryDetails();
+
+darkModeBtn.addEventListener("click", () => {
+  const modeTxt = document.querySelector(".dark-mode-text");
+  modeTxt.innerHTML = `<p>Light Mode</p>`;
+  body.classList.toggle("body-dark");
+  navBar.classList.toggle("dark-mode");
+});

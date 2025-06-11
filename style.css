@@ -349,3 +349,20 @@ a {
     justify-content: flex-start;
   }
 }
+
+/* Dark mode */
+
+.dark-mode {
+  background-color: #393e46;
+  color: white;
+}
+
+.body-dark {
+  background-color: #222831;
+  color: white;
+}
+
+/* ::placeholder {
+  color: white;
+  opacity: 1; 
+} */

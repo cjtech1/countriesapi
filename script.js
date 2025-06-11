@@ -1,7 +1,11 @@
 const cardContainer = document.querySelector(".cards-container");
-const cards = document.querySelector(".cards");
 const filterValue = document.querySelector("#counrty-selector");
 const searchInput = document.querySelector("#searchText");
+const darkModeBtn = document.querySelector(".right-container");
+const body = document.querySelector("#body");
+const selector = document.querySelector("#counrty-selector");
+const searchDiv = document.querySelector(".search-div");
+const navBar = document.querySelector(".top-bar");
 
 //using js to add card element based on data
 function createCardElements(data) {
@@ -78,4 +82,17 @@ searchInput.addEventListener("keydown", (e) => {
     const searchValue = searchInput.value.trim().toLowerCase();
     searchCountry(searchValue);
   }
+});
+
+darkModeBtn.addEventListener("click", () => {
+  const cards = document.querySelectorAll(".cards");
+  body.classList.toggle("body-dark");
+  selector.classList.toggle("dark-mode");
+  searchInput.classList.toggle("dark-mode");
+  searchDiv.classList.toggle("dark-mode");
+  navBar.classList.toggle("dark-mode");
+
+  cards.forEach((card) => {
+    card.classList.toggle("dark-mode");
+  });
 });
